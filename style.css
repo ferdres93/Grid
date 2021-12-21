@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.contenedor-grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 40% 10%;
+    grid-template-areas: 
+    "titulo articulo"
+    "titulo galeria"
+    "menu galeria"
+    ;
+
+}
+
+.menu {
+    background-color: rgb(231, 228, 228);
+    grid-area: menu;
+}
+
+.menu_container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1,
+h2{
+	font-weight: 300;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+
+/*menu*/
+
+.menu_item {
+    padding-top: 1rem;
+}
+
+.menu_item a{
+    margin: 1rem;
+    padding-top: 0.5rem;
+    color: rgb(126, 115, 119);
+}
+
+.menu a::before{
+	content: "•";
+}
+
+
+/*titulo*/
+
+.titulo {
+    background-color: rgb(231, 228, 228);
+    grid-area: titulo;
+}
+
+.titulo h1 {
+    font-size: 6rem;
+    margin-top: 2rem;
+}
+
+.titulo p {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 1rem;
+} 
+/*articulo*/
+
+.articulo {
+    background-color: white;
+    grid-area: articulo;
+}
+
+.articulo h2 {
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.articulo p {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 1rem;
+}
+
+/*galeria*/
+
+.galeria {
+    background-color: rgb(168, 168, 168);
+    grid-area: galeria;
+}
+
+.galeria h2 {
+    color: white;
+    font-size: 2rem;
+    margin-top: 0.2rem;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+
+.imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    background: white;
+    margin: 1rem;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.582);
+}
+
+
+@media (max-width: 1328px){ /*1328*/
+    
+    .contenedor-grid {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 10% 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "menu menu" 
+        "titulo titulo"
+        "articulo articulo"
+        "galeria galeria";
+    }
+
+    .titulo h1{
+        font-size: 5rem;
+        max-width: 200px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 2rem;
+    }
+
+    .titulo p {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40vw;
+    }
+
+    .articulo h2{
+        font-size: 3rem;
+        max-width: 200px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        }
+    
+    .articulo p {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40vw;
+        }
+
+    .imagen7,
+    .imagen8 {
+        display: none;
+    }
+
+    .imagen {
+        width: 120px;
+        height: 120px;
+        border-radius: 10%;
+        background: white;
+        margin: 1rem;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.582);
+    }
+
+}
+
+
+@media (max-width: 650px){
+    
+    .contenedor-grid {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 10% 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "menu menu" 
+        "titulo titulo"
+        "articulo articulo"
+        "galeria galeria";
+    }
+    .titulo p {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 1rem;
+    } 
+
+    .articulo p {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 1rem;
+    }
+
+    .imagen5,
+    .imagen6,
+    .imagen7,
+    .imagen8 {
+        display: none;
+    }
+
+    .imagen {
+        width: 120px;
+        height: 120px;
+    }
+
+    .imagenes {
+        margin: 2rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+        margin: 3rem;
+    }
+
+    .titulo h1 {
+        font-size: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .titulo p {
+        margin-bottom: 2.5rem;
+    }
+
+    .articulo h2 {
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .articulo p {
+        margin-bottom: 1rem;
+    }
+
+    .galeria h2 {
+        font-size: 2rem;
+    }
+}
